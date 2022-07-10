@@ -1,0 +1,132 @@
+.footer {
+  padding: 40px 0 49px;
+  @include tab {
+    padding: 84px 0 90px;
+  }
+  &__desk-wrapper {
+    @include tab {
+      display: flex;
+    }
+  }
+  &__logo {
+    display: block;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.22;
+    color: var(--blackColor);
+    margin-bottom: 54px;
+    @include tab {
+      margin-bottom: 58px;
+    }
+  }
+
+  &__data {
+    display: flex;
+    margin-bottom: 35px;
+    @include tab {
+      margin-bottom: 0;
+    }
+  }
+  &__meta {
+    @include tab {
+      margin-right: 66px;
+      width: 110px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    margin-bottom: 40px;
+  }
+  &__company {
+    margin-right: 20px;
+    width: 160px;
+    @include tab {
+      width: 165px;
+
+      margin-right: 37px;
+    }
+  }
+  &__programs {
+    margin-bottom: 35px;
+    @include tab {
+      margin-bottom: 58px;
+    }
+  }
+  &__legal {
+    width: 160px;
+    margin-right: 20px;
+    @include tab {
+      margin-right: 50px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #323642;
+    margin-bottom: 18px;
+    @include tab {
+      margin-bottom: 20px;
+    }
+  }
+  // &__item{}
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &__link {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.57;
+    color: var(--secondaryColor);
+    letter-spacing: 0;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.57;
+    letter-spacing: -1;
+
+    color: var(--secondaryColor);
+    &--second {
+      margin: 18px 0;
+      @include tab {
+        margin: 12px 0;
+      }
+    }
+    &--last {
+      margin-top: 18px;
+      @include tab {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  &__social {
+    display: none;
+    @include tab {
+      display: block;
+    }
+  }
+}
+
+.social {
+  @include tab {
+    display: none;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 43px 43px 43px;
+    align-items: center;
+    column-gap: 15px;
+    row-gap: 15px;
+    @include tab {
+      display: flex;
+    }
+  }
+  &__icon {
+    fill: #323642;
+  }
+}

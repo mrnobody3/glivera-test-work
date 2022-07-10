@@ -1,0 +1,239 @@
+.blog {
+  @include tab {
+    display: none;
+  }
+  &__form {
+    position: relative;
+  }
+  &__icon {
+    position: absolute;
+    top: 21px;
+    left: 21px;
+  }
+  // &__search {
+  // }
+  &__input {
+    display: block;
+    width: 100%;
+    height: 59px;
+    padding: 16px 15px 15px 58px;
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.56;
+    color: var(--mainColor);
+    background-color: #fff;
+    border: 1px solid var(--borderColor);
+    border-radius: 4px;
+    &:hover ~ .blog__icon,
+    &:focus ~ .blog__icon {
+      fill: var(--accentColor);
+    }
+  }
+}
+
+// ---------------posts---------
+
+.posts {
+  padding: 20px 0 80px;
+  @include tab {
+    padding-bottom: 73px;
+  }
+  &__wrapper {
+    padding: 0 30px;
+    margin: 0 auto;
+    width: 100%;
+    @include mobile {
+      width: 450px;
+    }
+    @include tab {
+      width: 738px;
+      display: flex;
+    }
+    @include desk {
+      width: 1200px;
+    }
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 1.38;
+  }
+  &__data {
+    padding: 20px 0;
+    @include tab {
+      padding-top: 0;
+      margin-right: 60px;
+    }
+  }
+  &__list {
+    margin-bottom: 60px;
+    @include tab {
+      margin-bottom: 40px;
+    }
+  }
+  &__item {
+    padding: 20px 0;
+    border-bottom: 1px solid #ebeced;
+    @include tab {
+      display: flex;
+      padding: 30px 0;
+    }
+  }
+  &__img {
+    width: 100%;
+    margin-bottom: 20px;
+    @include tab {
+      margin-right: 20px;
+      margin-bottom: 0;
+      width: 280px;
+    }
+  }
+  &__description {
+    margin-bottom: 20px;
+    @include tab {
+      margin-bottom: 7px;
+    }
+  }
+  &__sign {
+    display: flex;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.57;
+    color: #323642;
+    margin-bottom: 12px;
+    @include tab {
+      margin-bottom: 8px;
+    }
+  }
+  &__date {
+    color: var(--secondaryColor);
+    border-left: 1px solid var(--secondaryColor);
+    margin-left: 8px;
+    padding-left: 8px;
+  }
+  &__tags {
+    color: var(--accentColor);
+    font-size: 12px;
+    line-height: 1.33;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+    @include tab {
+      margin-bottom: 12px;
+    }
+  }
+  &__comments {
+    display: flex;
+    align-items: center;
+    color: var(--secondaryColor);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.57;
+  }
+  &__icon {
+    fill: var(--secondaryColor);
+    margin-right: 9px;
+  }
+  &__btn {
+    display: block;
+    width: 315px;
+    margin: 0 auto;
+    border: 1px solid var(--accentColor);
+    color: var(--accentColor);
+    margin-bottom: 70px;
+  }
+  &__aside {
+    @include tab {
+      width: 400px;
+      padding-left: 60px;
+      border-left: 1px solid #ebeced;
+    }
+  }
+}
+
+// -------------aside-------------------
+
+.aside {
+  &__form {
+    display: none;
+    @include tab {
+      display: block;
+      margin-bottom: 32px;
+    }
+  }
+  &__title {
+    text-align: center;
+    position: relative;
+    font-weight: 300;
+    font-size: 24px;
+    margin-bottom: 35px;
+    &--alarm::before {
+      content: '';
+      background-image: url(../images/alarm.png);
+      position: absolute;
+      height: 60px;
+      width: 60px;
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &--wifi::before {
+      content: '';
+      background-image: url(../images/wifi.png);
+      position: absolute;
+      height: 60px;
+      width: 60px;
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &--tag {
+      text-align: start;
+    }
+  }
+  &__list {
+    margin-bottom: 30px;
+  }
+  &__item {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ebeced;
+    &:not(:last-child) {
+      margin-bottom: 71px;
+    }
+  }
+  &__subitem {
+    position: relative;
+    font-weight: 400;
+    padding-left: 22px;
+
+    font-size: 14px;
+    line-height: 1.57;
+
+    color: #323642;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    &::before {
+      position: absolute;
+      left: 12px;
+      content: '•';
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.57;
+
+      color: #4cb649;
+    }
+  }
+  &__img {
+    &--privet {
+      margin: 0 auto;
+      margin-bottom: 60px;
+    }
+    &--cloud {
+      width: 100%;
+    }
+  }
+}

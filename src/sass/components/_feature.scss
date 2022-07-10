@@ -1,0 +1,71 @@
+.feature {
+  padding: 31px 0 20px;
+  @include tab {
+    padding-top: 0;
+  }
+  &__img {
+    width: 100%;
+    margin-bottom: 30px;
+    @include tab {
+      width: 50%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__card {
+    border: 1px solid var(--borderColor);
+    border-radius: 6px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.101961);
+    @include tab {
+      display: flex;
+    }
+  }
+  &__data {
+    padding: 0 30px 14px;
+    @include tab {
+      padding: 59px 60px 40px;
+      width: 50%;
+    }
+  }
+  &__text {
+    margin-bottom: 14px;
+    @include tab {
+      margin-bottom: 84px;
+    }
+  }
+  &__sign {
+    display: flex;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.57;
+    color: #323642;
+    margin-bottom: 12px;
+  }
+  &__date {
+    color: var(--secondaryColor);
+    border-left: 1px solid var(--secondaryColor);
+    margin-left: 8px;
+    padding-left: 8px;
+  }
+  &__tags {
+    color: var(--accentColor);
+    font-size: 12px;
+    line-height: 1.33;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+  }
+  &__comments {
+    display: flex;
+    align-items: center;
+    color: var(--secondaryColor);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.57;
+  }
+  &__icon {
+    fill: var(--secondaryColor);
+    margin-right: 9px;
+  }
+}

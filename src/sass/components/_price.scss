@@ -1,0 +1,232 @@
+.price {
+  padding: 60px 0 40px;
+  background: linear-gradient(161.3deg, #3d4251 7.63%, #272b35 90.9%);
+  @include tab {
+    padding: 100px 0 53px;
+  }
+  &__container {
+    padding: 0 30px;
+    margin: 0 auto;
+    width: 100%;
+    @include mobile {
+      width: 450px;
+    }
+    @include tab {
+      width: 738px;
+    }
+    @include desk {
+      width: 1200px;
+    }
+  }
+  &__title {
+    color: var(--whiteColor);
+    font-size: 32px;
+    line-height: 1.38;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-weight: 300;
+    width: 80%;
+    @include tab {
+      font-size: 48px;
+      line-height: 1.33;
+      text-align: center;
+      letter-spacing: -0.5px;
+    }
+  }
+  &__list {
+    margin-bottom: 36px;
+    @include tab {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 31px;
+    }
+  }
+  &__item {
+    text-align: center;
+    background-color: var(--whiteColor);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.501961);
+    border: 1px solid #ebeced;
+    border-radius: 6px;
+    padding: 48px 0 40px;
+    &--primary {
+      border: 4px solid var(--warningColor);
+
+      @include tab {
+        border-color: var(--accentColor);
+        padding: 59px 0;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    @include tab {
+      width: 380%;
+      &:not(:last-child) {
+        margin-bottom: 0px;
+        margin-right: 20px;
+      }
+    }
+  }
+  &__subtitle {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  &__line {
+    border: 2px solid var(--accentColor);
+    width: 24px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+  }
+  &__amount {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 1.18;
+    letter-spacing: -1.5px;
+    color: var(--mainColor);
+    margin-bottom: 18px;
+    &::before {
+      position: absolute;
+      content: '$';
+      top: 12px;
+      left: 90px;
+      font-size: 24px;
+      line-height: 1.33;
+    }
+    &::after {
+      position: absolute;
+      content: '/mo.';
+      bottom: 0;
+      right: 60px;
+      font-size: 24px;
+      line-height: 1.33;
+    }
+  }
+  &__subline {
+    height: 1px;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 27px;
+    background-color: #ebeced;
+  }
+  &__description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.57;
+    width: 205px;
+    color: #323642;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    &--old {
+      text-decoration-line: line-through;
+
+      color: #f24458;
+    }
+    &--save {
+      font-weight: 700;
+    }
+  }
+  &__btn {
+    width: 205px;
+    color: var(--accentColor);
+    text-transform: uppercase;
+    border: 1px solid var(--accentColor);
+    &--primary {
+      background-color: var(--warningColor);
+      border-color: var(--warningColor);
+      color: var(--whiteColor);
+      @include tab {
+        background-color: var(--accentColor);
+        border-color: var(--accentColor);
+      }
+    }
+  }
+  &__pay-title {
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.56;
+    color: var(--whiteColor);
+    margin-bottom: 20px;
+    @include tab {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.pay {
+  @include tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__values {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+    @include tab {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 8px;
+    }
+  }
+  &__item {
+    grid-column: span 2;
+    padding: 20px;
+    @include tab {
+      padding: 15px;
+    }
+  }
+  &__item:last-child:nth-child(3n - 1) {
+    grid-column-end: -2;
+  }
+
+  &__item:nth-last-child(2):nth-child(3n + 1) {
+    grid-column-end: 4;
+  }
+
+  &__item:last-child:nth-child(3n - 2) {
+    grid-column-end: 5;
+  }
+
+  &__link-list {
+    @include tab {
+      justify-content: center;
+      display: flex;
+    }
+  }
+  &__link-item:not(:last-child) {
+    margin-bottom: 38px;
+    @include tab {
+      margin-bottom: 0;
+      margin-right: 40px;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--accentColor);
+  }
+  &__icon {
+    fill: var(--accentColor);
+    margin-left: 12px;
+  }
+}

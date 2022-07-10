@@ -1,0 +1,23 @@
+:root {
+  --warningColor: #ff8d00;
+  --whiteColor: #fff;
+  --blackColor: #000;
+  --mainColor: #22252e;
+  --secondaryColor: #889099;
+  --borderColor: #d7d8d9;
+  --accentColor: #4cb649;
+  --btnBgc: linear-gradient(0deg, #4cb649 0%, #5ddf5a 100%);
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
